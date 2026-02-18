@@ -33,7 +33,7 @@ pipeline {
                 sh """
                 docker run -d -p 5000:5000 --name flask-test ${DOCKER_IMAGE}:${DOCKER_TAG}
                 sleep 5
-                docker ls
+                docker container ls
                 docker stop flask-test
                 docker rm flask-test
                 """
