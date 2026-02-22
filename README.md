@@ -99,7 +99,63 @@ docker-compose up -d
 ---
 ##  Pipeline Configuration (Start the Build)
 
+ 
+### 1)Install Required Plugins
+Go to:
 
+Manage Jenkins → Manage Plugins → Install:
+
+- Git
+- Pipeline
+- Docker Pipeline
+- Credentials Binding
+
+**Restart Jenkins after installation.**
+
+
+
+
+
+### 2)Configure Docker Hub Credentials
+
+Configure Docker Hub Credentials
+
+Go to:
+
+Manage Jenkins → Credentials → Global → Add Credentials
+
+Add:
+- Kind: Username with password
+- ID: dockerhub-creds
+- Username: Your Docker Hub username
+- Password: Your Docker Hub password
+
+**and add another one for Git Credentials**
+
+
+
+
+### 3)Create Pipeline Job
+1. Click New Item
+2. Select Pipeline
+3. Choose:  `Pipeline script from SCM`
+4. Configure:
+- SCM: Git
+- Repository URL:  `https://github.com/Mostafaelniny/flask-app-ci-cd-pipeline.git` 
+- Branch: main
+- Script Path: Jenkinsfile
+  
+**Save.**
+
+
+
+
+### 4)Start the Build
+- Click  `Build Now`
+- Monitor progress in: `Build → Console Output`
+- A successful build will show:  `Successfully built
+                                  Successfully pushed
+                                  Finished: SUCCESS`
 
 
 ---
@@ -124,6 +180,7 @@ Mostafa Elniny – DevOps Engineer in the making
 ---
 
 ## Repository Links 
+
 
 
 
