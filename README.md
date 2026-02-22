@@ -26,11 +26,11 @@ This project simulates a real-world DevOps workflow with automated CI/CD. :conte
 2. [Project Architecture](#project-architecture)  
 3. [Prerequisites](#prerequisites)  
 4. [Installation & Setup](#installation--setup)  
-5. [CI/CD Pipeline Overview](#cicd-pipeline-overview)  
-6. [Usage](#usage)  
-7. [Screenshots](#screenshots)  
-8. [Future Improvement Ideas](#future-improvement-ideas)  
-9. [Author](#author)
+5. [Pipeline Configuration (Start the Build)](#pipeline-configuration-start-the-build)
+6. [Screenshots](#screenshots)  
+7. [Future Improvement Ideas](#future-improvement-ideas)  
+8. [Author](#author)
+9. [Repository Links](#repository-links)
 
 ---
 
@@ -63,7 +63,6 @@ Before you begin, ensure you have the following installed:
 
 ✔ Docker  
 ✔ Docker Compose  
-✔ Jenkins (in container)  
 ✔ Docker Hub account  
 ✔ Git & GitHub account  
 
@@ -88,6 +87,43 @@ docker run -d -p 5000:5000 yourdockerhubusername/flask-app
 ```
 **Visit:** `http://localhost:5000` to verify.
 
-### 4.
+### 4. Run Jenkins using the docker-compose.yml file 
+```bash
+docker-compose up -d
+```
+- **Verify Jenkins is Running**    `docker ls`
+- **Access Jenkins**               `http://localhost:8080`
+- **Get Initial Admin Password**   `docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword`
+
+
+---
+##  Pipeline Configuration (Start the Build)
+
+
+
+
+---
+## Screenshots
+
+
+---
+
+## Future Improvement Ideas
+
+- ✔ Add automated tests (PyTest)
+- ✔ Use multi-stage Dockerfile for smaller image
+- ✔ Deploy to cloud (AWS / Azure / GCP)
+- ✔ Add monitoring & alerts
+
+---
+
+## Author
+
+Mostafa Elniny – DevOps Engineer in the making
+
+---
+
+## Repository Links 
+
 
 
