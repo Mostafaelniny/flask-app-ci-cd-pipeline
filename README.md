@@ -278,8 +278,8 @@ Mostafa Elniny – DevOps Engineer in the making
 
 ## Repository Links 
 
-- 💼 LinkedIn: [Mostafa Elniny](http://www.linkedin.com/in/mostafa-mmdouh-elniny-4k)
-- 🐳 Docker Hub: [mostafaelniny](https://hub.docker.com/r/mostafaelniny)
+- 💼 [LinkedIn Profile](http://www.linkedin.com/in/mostafa-mmdouh-elniny-4k)
+- 🐳 [Docker Hub Profile](https://hub.docker.com/r/mostafaelniny)
 
 
 
