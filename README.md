@@ -1,7 +1,4 @@
 
-
-
-
 #  Flask App CI/CD Pipeline
 
 This repository demonstrates how to build a **CI/CD pipeline** for a Dockerized Python Flask application using **Jenkins** running inside a container.
@@ -12,7 +9,7 @@ Whenever you push code to GitHub, Jenkins will:
 3. Push the image to Docker Hub  
 4. Deploy the latest container
 
-This project simulates a real-world DevOps workflow with automated CI/CD. :contentReference[oaicite:1]{index=1}
+This project simulates a real-world DevOps workflow with automated CI/CD.
 
 ![Docker](https://img.shields.io/badge/Docker-Containerized-blue?logo=docker)
 ![Linux](https://img.shields.io/badge/Linux-Ubuntu-orange?logo=linux)
@@ -43,7 +40,7 @@ This project contains:
 - Integration with **Docker Hub** for image storage  
 - Automated build and deployment on code push
 
-It’s a practical example of how CI/CD pipelines work in real DevOps environments. :contentReference[oaicite:2]{index=2}
+It’s a practical example of how CI/CD pipelines work in real DevOps environments. 
 
 ---
 
@@ -100,7 +97,7 @@ docker-compose up -d
 ##  Pipeline Configuration (Start the Build)
 
  
-### 1)Install Required Plugins
+### 1) Install Required Plugins
 Go to:
 
 Manage Jenkins → Manage Plugins → Install:
@@ -116,7 +113,7 @@ Manage Jenkins → Manage Plugins → Install:
 
 
 
-### 2)Configure Docker Hub Credentials
+### 2) Configure Docker Hub Credentials
 
 Configure Docker Hub Credentials
 
@@ -135,10 +132,10 @@ Add:
 
 
 
-### 3)Create Pipeline Job
+### 3) Create Pipeline Job
 1. Click New Item
 2. Select Pipeline
-3. Choose:  `Pipeline script from SCM`
+3. Choose:  `Pipeline script from SCM.`
 4. Configure:
 - SCM: Git
 - Repository URL:  `https://github.com/Mostafaelniny/flask-app-ci-cd-pipeline.git` 
@@ -150,9 +147,26 @@ Add:
 
 
 
-### 4)Start the Build
+### 4) Enable Webhook Trigger
+In the Pipeline configuration **Build Triggers**, check: `☑ GitHub hook trigger for GITScm polling`
+This allows GitHub push events to trigger builds automatically.
+
+
+### 5) Create GitHub Webhook
+In your GitHub repository:
+- Go to **Settings → Webhooks → Add webhook**
+- **Payload URL:**   `http://<PUBLIC_URL>/github-webhook/`
+
+⚠️ If Jenkins runs locally (e.g., `localhost:8080`), GitHub cannot reach it directly.
+To expose Jenkins publicly during development, you can use **ngrok**: ```bash ngrok http 8080 ```
+Copy the Forwarding URL (e.g., https://xxxxx.ngrok.io) and use it in the webhook URL.
+**Now every time you push to GitHub, the Jenkins Pipeline will start automatically.**
+
+
+
+### 6) Start the Build
 - Click  `Build Now`
-- Monitor progress in: `Build → Console Output`
+- Monitor progress in: `Build → Console Output.`
 - A successful build will show:  `Successfully built
                                   Successfully pushed
                                   Finished: SUCCESS`
@@ -180,6 +194,7 @@ Mostafa Elniny – DevOps Engineer in the making
 ---
 
 ## Repository Links 
+
 
 
 
