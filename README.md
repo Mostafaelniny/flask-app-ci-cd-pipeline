@@ -208,7 +208,7 @@ sudo ufw status
 
 1️⃣ Project Structure
 
-<img width="275" height="193" alt="image" src="https://github.com/user-attachments/assets/2d6d2fd6-baf7-4b9b-b77a-63547b08bd7c" />
+<img width="357" height="247" alt="image" src="https://github.com/user-attachments/assets/6d9da5ae-1007-4a4f-ad82-f009b0aad0a7" />
 
 ---
 
@@ -281,6 +281,7 @@ Mostafa Elniny – DevOps Engineer in the making
 
 - 💼 [LinkedIn Profile](http://www.linkedin.com/in/mostafa-mmdouh-elniny-4k)
 - 🐳 [Docker Hub Profile](https://hub.docker.com/r/mostafaelniny)
+
 
 
 
